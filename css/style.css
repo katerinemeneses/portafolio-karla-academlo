@@ -1,0 +1,505 @@
+:root {
+  --color1: #f1a600;
+  --color2: #1f1d2c;
+  --color3: #242635;
+  --color4: #959595;
+  --color5: #ffffff;
+  --title-mobile: 50px;
+  --subtitle-mobile: 32px;
+  --subsection-mobile: 18px;
+  --body-mobile: 16px;
+  --title-desktop: 150px;
+  --subtitle-desktop: 50px;
+  --subsection-desktop: 45px;
+  --body-desktop: 18px;
+}
+/* ------------------- RESET ------------------- */
+*{
+  box-sizing: border-box;
+}
+html{
+  scroll-behavior: smooth;
+}
+body{
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--color2);
+  color: var(--color5);
+}
+a{
+  text-decoration: none;
+}
+li{
+  list-style: none;
+}
+ul{
+  padding: 0;
+}
+/* ------------------- HEADER ------------------- */
+.header{
+  width: 100vw;
+  height: 70px;
+  z-index: 1;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+.menu{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--color2);
+  left: 0;
+  top: -100vh;
+  transition: top 500ms ease;
+  z-index: 1;
+  padding-top: 50px;
+}
+.menu__open{
+  top: 0;
+  transition: top 500ms ease;
+}
+.menu-list{
+  display: flex;
+  flex-direction: column;
+}
+.menu-link{
+  display: block;
+  padding: 15px 0;
+  width: 100%;
+  font-size: var(--subsection-mobile);
+  text-align: center;
+  color: var(--color5);
+}
+
+.menu-hamburguesa-container{
+  position: absolute;
+  right: 25px;
+}
+.menu-hamburguesa{
+  filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(234deg) brightness(109%) contrast(101%);
+}
+/* ------------------- HOME ------------------- */
+.home{
+  margin-bottom: min(27vw, 180px);
+  padding: 0 4vw 0;
+}
+.background-home{
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -2;
+  width: min(70vw, 500px);
+}
+.name-person{
+  font-weight: 600;
+  font-size: min(13vw, 80px);
+  margin: 0;
+}
+.image-person-container{
+  width: min(53vw, 350px);
+  height: min(61vw, 400px);
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+  top: min(35vw, 170px);
+  right: 5vw;
+}
+.random-person{
+  position: absolute;
+  width: min(110vw, 700px);
+  top: -30px;
+  left: 50%;
+  transform: translate(-50%);
+  width: 100%;
+  height: auto;
+}
+.person-description{
+  font-size: min(5vw, 32px);
+  font-weight: 300;
+  width: min(50vw, 460px);
+  line-height: 1.3;
+  text-shadow: 1px 1px 5px #1f1d2c;
+  margin-top: 18px;
+}
+.experience-years{
+  font-weight: 200;
+  font-size: min(4vw, 32px);
+  width: 26vw;
+  margin-top: 18px;
+}
+.experience-years-span{
+  color: var(--color1);
+}
+.redes-sociales{
+  display: flex;
+  justify-content: space-around;
+  width: min(32vw, 220px);
+  margin-top: 20px;
+}
+.icon-redes{
+  width: min(6.4vw, 52px);
+}
+/* ------------------- ACERCA DE MÍ ------------------- */
+.about-me{
+  position: relative;
+  background-image: url("../vectores/rectangle-about-me.svg");
+  background-size: cover;
+  padding: 0 4vw 50px;
+}
+.title-section{
+  text-align: center;
+  width: 100%;
+  font-size: var(--subtitle-mobile);
+  font-weight: 500;
+  padding: 20px 0;
+  margin: 0;
+}
+.background-about-me{
+  position: absolute;
+  top: 0;
+  left: -15px;
+  width: 100px;
+  height: 20px;
+  z-index: -1;
+}
+.about-me-description{
+  text-align: center;
+  font-size: var(--body-mobile);
+  line-height: 1.5;
+  font-weight: 200;
+  margin: 0;
+}
+.institutions{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 40px;
+}
+.article-institution{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.logo-about-me{
+  width: 70px;
+}
+.title-logo-about-me{
+  margin: 0;
+  margin-top: 7px;
+  font-weight: 500;
+  font-size: 16px;
+}
+.institution-years{
+  margin: 0;
+  font-weight: 200;
+  font-size: 12px;
+}
+/* ------------------- EXPERIENCIA ------------------- */
+.section-experience{
+  margin-bottom: 30px;
+  position: relative;
+  padding: 0 4vw 0;
+}
+.title-experiencia{
+  margin-bottom: 10px;
+  padding-top: 40px;
+}
+.experience{
+  display: flex;
+  justify-content: space-evenly;
+  padding-right: 30px;
+  margin-bottom: 30px;
+}
+.experience-description{
+  width: 115px;
+}
+.experience-title{
+  font-size: var(--subsection-mobile);
+  font-weight: 500;
+  margin: 0;
+}
+.cargo{
+  margin: 0;
+  font-size: 14px;
+  font-weight: 200;
+  margin-top: 2px;
+  margin-bottom: 4px;
+}
+.years-cargo{
+  margin: 0;
+  font-size: 12px;
+  font-weight: 100;
+}
+.line-experience{
+  position: absolute;
+  top: 120px;
+  right: 15px;
+}
+/* ------------------- MIS HABILIDADES ------------------- */
+.section-habilities{
+  margin-top: 40px;
+  padding: 20px 10vw 40px;
+  position: relative;
+  background-image: url(../vectores/rectangle-habilities.svg);
+  background-size: 100%;
+  background-position-x: -64vw;
+  background-repeat: no-repeat;
+}
+.habilities{
+  display: flex;
+  align-items: center;
+  margin: 22px 0;
+}
+.habilities:nth-child(2){
+  margin-top: 12px;
+}
+.habilities:nth-child(5){
+  margin: 0;
+}
+.porcentaje{
+  font-size: var(--subtitle-mobile);
+  font-weight: 500;
+  color: var(--color1);
+  margin: 0;
+}
+.habilities-description{
+  margin: 0;
+  margin-left: 50px;
+}
+/* ------------------- MI PORTAFOLIO ------------------- */
+.my-portfolio{
+  margin-bottom: 80px;
+  padding: 0 4vw 0;
+}
+.title-portfolio{
+  padding-top: 50px;
+}
+.list-project{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.project{
+  margin-top: 8px;
+}
+.image-project-container{
+  width: 240px;
+  height: 165px;
+  background-color: var(--color1);
+  position: relative;
+}
+.img-project{
+  width: 230px;
+  position: absolute;
+  top: 10px;
+  left: 5px;
+}
+.title-project{
+  font-size: var(--body-mobile);
+  font-weight: 400;
+  margin-top: 30px;
+}
+.project:nth-child(2){
+  align-self: flex-end;
+  margin-bottom: 10px;
+}
+.project:nth-child(2) .image-project-container{
+  background-color: var(--color3);
+}
+/* ------------------- CONTACTO ------------------- */
+.section-contact{
+  position: relative;
+  padding-bottom: 44px;
+  padding: 0 4vw 0;
+  background-image: url(../vectores/renctangle-contact.svg);
+}
+.title-section-contact{
+  margin: 0;
+  padding: 35px 0 20px;
+}
+.contact-container{
+  display: flex;
+  justify-content: space-around;
+  height: 170px;
+  margin-top: 10px;
+}
+.contact{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contact:nth-child(2){
+  align-self: flex-end;
+}
+.img-contact{
+  width: 70px;
+}
+.title-contact{
+  font-size: 16px;
+  font-weight: 500;
+  margin: 25px 0 5px;
+}
+.contact-info{
+  font-size: 13px;
+  font-weight: 200;
+  opacity: 0.6;
+  margin: 0;
+}
+/* ------------------- FOOTTER ------------------- */
+.footer{
+  width: 100%;
+  text-align: center;
+  padding: 30px 0;
+}
+
+/* ------------------- RESPONSIVE ------------------- */
+@media screen and (min-width: 630px) {
+  /* ------- HEADER ------- */
+  .menu-hamburguesa-container{
+    right: 12vw;
+  }
+  /* ------- HOME ------- */
+  .home{
+    padding: 0 13vw;
+  }
+  /* ------- ACERCA DE MÍ ------- */
+  .about-me{
+    padding: 15px 20vw 50px;
+  }
+  .logo-about-me{
+    width: 100px;
+  }
+  .title-logo-about-me{
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+  .institution-years{
+    font-size: 14px;
+  }
+  /* ------- EXPERIENCIA ------- */
+  .section-experience{
+    padding: 0 13vw;
+  }
+  .experience{
+    margin-bottom: 60px;
+  }
+  .img-experience{
+    width: 110px;
+  }
+  .experience-title{
+    font-size: 22px;
+  }
+  .cargo{
+    font-size: 17px;
+  }
+  .years-cargo{
+    font-size: 14px;
+  }
+  .years-experience{
+    font-size: 22px;
+  }
+  .line-experience{
+    top: 110px;
+    width: 15px;
+    left: 80%;
+  }
+  /* ------- MIS HABILIDADES ------- */
+  .section-habilities{
+    padding: 20px 20vw 40px;
+  }
+  .section-habilities .title-section{
+    text-align: left;
+  }
+  .porcentaje{
+    font-size: 50px;
+  }
+  .habilities-description{
+    font-size: 22px;
+  }
+  /* ------- PORTAFOLIO ------- */
+  .my-portfolio{
+    padding: 0 13vw;
+    margin-bottom: 50px;
+  }
+  .title-portfolio{
+    padding-bottom: 30px;
+  }
+  .image-project-container{
+    width: 380px;
+    height: 260px;
+  }
+  .img-project{
+    width: 360px;
+    top: 20px;
+    left: 10px;
+  }
+  .title-project{
+    margin-top: 50px;
+    font-size: 22px;
+  }
+  /* ------- CONTACTO ------- */
+  .section-contact{
+    padding: 0 13vw 40px;
+  }
+  .contact-container{
+    height: 250px;
+  }
+  .image-person-container{
+    right: 12vw;
+  }
+  .img-contact{
+    width: 90px;
+  }
+  .redes-sociales{
+    justify-content: space-between;
+  }
+  .title-contact{
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  .contact-info{
+    font-size: 14px;
+  }
+}
+/* ------------------- RESPONSIVE ------------------- */
+@media screen and (min-width: 1024px) {
+  .header{
+    width: 97vw;
+  }
+  .menu-hamburguesa-container{
+    display: none;
+  }
+  .menu-hamburguesa{
+    display: none;
+  }
+  .menu{
+    position: static;
+    height: initial;
+    background-color: transparent;
+    top: -100vh;
+    width: 100vw;
+    padding-top: 0;
+    padding-right: 20px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .menu__open{
+    top: 0;
+  }
+  .menu-list{
+    flex-direction: row;
+  }
+  .menu-link{
+    display: block;
+    padding: 0;
+    width: 100%;
+    font-size: 15px;
+    padding: 0 20px;
+    text-align: center;
+    color: var(--color5);
+  }
+  .menu-item:nth-child(1) .menu-link{
+    color: var(--color1);
+  }
+}
